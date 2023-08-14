@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CoinPage = () => {
-  return <div>CoinPage</div>;
+  return <div></div>;
 };
 
 export default CoinPage;

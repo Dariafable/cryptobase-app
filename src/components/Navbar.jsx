@@ -24,7 +24,7 @@ const Navbar = () => {
         </Link>
         <Link
           to='/signup'
-          className='bg-button text-btnTxt px-5 py-2 ml-2 rounded-2xl shadow-lg hover:shadow-2xl'
+          className='px-5 py-2 ml-2 bg-button text-btnTxt rounded-2xl shadow-lg hover:shadow-2xl'
         >
           Sign Up
         </Link>
@@ -42,15 +42,15 @@ const Navbar = () => {
             : 'fixed left-[-100%] top-20 h-[90%]  flex flex-col items-center justify-between bg-primary easy-in duration-300'
         }
       >
-        <ul className='w-full p-4'>
-          <li className='border-b py-6'>
+        <ul className='p-4 w-full'>
+          <li className='py-6 border-b'>
             <Link to='/'>Home</Link>
           </li>
-          <li className='border-b py-6'>
+          <li className='py-6 border-b'>
             <Link to='/aacount'>Account</Link>
           </li>
         </ul>
-        <div className='flex flex-col w-full p-4'>
+        <div className='p-4 flex flex-col w-full'>
           <Link to='/signin'>
             <button
               onClick={handleNav}
