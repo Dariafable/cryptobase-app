@@ -14,11 +14,11 @@ const CoinItem = ({ coin }) => {
           <p className='hidden md:table-cell'>{coin.name}</p>
         </div>
       </td>
-      <td className='font-bold'>{coin.symbol.toUpperCase()}</td>
+      <td className='font-bold text-left'>{coin.symbol.toUpperCase()}</td>
       <td>${coin.current_price.toLocaleString()}</td>
       <td>
         {coin.price_change_percentage_24h > 0 ? (
-          <p className='text-green-500'>{coin.price_change_percentage_24h.toFixed(2)}%</p>
+          <p className='text-green-500'>+{coin.price_change_percentage_24h.toFixed(2)}%</p>
         ) : (
           <p className='text-rose-400'>{coin.price_change_percentage_24h.toFixed(2)}%</p>
         )}
