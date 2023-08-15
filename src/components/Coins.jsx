@@ -43,7 +43,7 @@ const Coins = ({ coins }) => {
               }
             })
             .map((coin) => (
-              <CoinItem coin={coin} />
+              <CoinItem key={coin.last_updated} coin={coin} />
             ))}
         </tbody>
       </table>
