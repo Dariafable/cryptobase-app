@@ -1,13 +1,14 @@
 import React from 'react';
 import axios from 'axios';
 import { ThemeProvider } from './context/ThemeContext';
-import Navbar from './components/Navbar';
 import { Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
 import Home from './routes/Home';
 import CoinPage from './routes/CoinPage';
 import Signin from './routes/Signin';
 import Signup from './routes/Signup';
 import Account from './routes/Account';
+import Footer from './components/Footer';
 
 function App() {
   const [coins, setCoins] = React.useState([]);
@@ -39,6 +40,7 @@ function App() {
           <Route path=':coinId' />
         </Route>
       </Routes>
+      <Footer />
     </ThemeProvider>
   );
 }
