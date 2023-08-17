@@ -1,6 +1,13 @@
 import React from 'react';
-import { AiOutlineInstagram } from 'react-icons/ai';
-import { FaFacebookF, FaGit, FaGithub, FaTiktok, FaTwitter } from 'react-icons/fa';
+import {
+  FaInstagram,
+  FaTelegram,
+  FaYoutube,
+  FaReddit,
+  FaGithub,
+  FaTiktok,
+  FaTwitter,
+} from 'react-icons/fa';
 import ThemeToggle from './ThemeToggle';
 
 const Footer = () => {
@@ -47,12 +54,27 @@ const Footer = () => {
                 </form>
               </div>
               <div className='py-4 flex justify-between text-accent'>
-                <AiOutlineInstagram className='cursor-pointer' />
-                <FaFacebookF className='cursor-pointer' />
-                <FaTiktok className='cursor-pointer' />
-                <FaTwitter className='cursor-pointer' />
-                <FaGithub className='cursor-pointer' />
-                <FaGit className='cursor-pointer' />
+                <a href='https://www.instagram.com/coingecko/' target='_blank'>
+                  <FaInstagram />
+                </a>
+                <a href='https://t.me/coingeckonews' target='_blank'>
+                  <FaTelegram />
+                </a>
+                <a href='https://www.tiktok.com/@coingeckotv' target='_blank'>
+                  <FaTiktok />
+                </a>
+                <a href='https://www.reddit.com/r/coingecko/' target='_blank'>
+                  <FaReddit />
+                </a>
+                <a href='https://twitter.com/coingecko' target='_blank'>
+                  <FaTwitter />
+                </a>
+                <a href='https://github.com/coingecko' target='_blank'>
+                  <FaGithub />
+                </a>
+                <a href='https://www.youtube.com/channel/UC-OTgwOAI7KmP0eDAtqN3Ow' target='_blank'>
+                  <FaYoutube />
+                </a>
               </div>
             </div>
           </div>
