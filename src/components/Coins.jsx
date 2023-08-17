@@ -38,7 +38,10 @@ const Coins = ({ coins }) => {
             .filter((value) => {
               if (searchText === '') {
                 return value;
-              } else if (value.name.toLowerCase().includes(searchText.toLowerCase())) {
+              } else if (
+                value.name.toLowerCase().includes(searchText.toLowerCase()) ||
+                value.symbol.toLowerCase().includes(searchText.toLowerCase())
+              ) {
                 return value;
               }
             })
