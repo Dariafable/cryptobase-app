@@ -6,7 +6,7 @@ import ThemeToggle from './ThemeToggle';
 const Footer = () => {
   return (
     <div className='mt-8 pt-8 rounded-div text-primary'>
-      <div className='grid md:grid-cols-2'>
+      <div className='grid md:grid-cols-2 md:items-center'>
         <div className='w-full md:max-w-[300px] flex justify-evenly uppercase'>
           <div>
             <h2 className='font-bold'>Support</h2>
