@@ -18,19 +18,19 @@ const Footer = () => {
           <div>
             <h2 className='font-bold'>Support</h2>
             <ul>
-              <li className='py-2 text-sm'>Help Center</li>
-              <li className='py-2 text-sm'>Contact Us</li>
-              <li className='py-2 text-sm'>API Status</li>
-              <li className='py-2 text-sm'>Documentation</li>
+              <li className='py-2 text-sm  cursor-pointer'>Help Center</li>
+              <li className='py-2 text-sm cursor-pointer'>Contact Us</li>
+              <li className='py-2 text-sm cursor-pointer'>API Status</li>
+              <li className='py-2 text-sm cursor-pointer'>Documentation</li>
             </ul>
           </div>
           <div>
             <h2 className='font-bold'>Info</h2>
             <ul>
-              <li className='py-2 text-sm'>About Us</li>
-              <li className='py-2 text-sm'>Careers</li>
-              <li className='py-2 text-sm'>Invest</li>
-              <li className='py-2 text-sm'>Legal</li>
+              <li className='py-2 text-sm cursor-pointer'>About Us</li>
+              <li className='py-2 text-sm cursor-pointer'>Careers</li>
+              <li className='py-2 text-sm cursor-pointer'>Invest</li>
+              <li className='py-2 text-sm cursor-pointer'>Legal</li>
             </ul>
           </div>
         </div>
