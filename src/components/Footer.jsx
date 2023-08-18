@@ -49,7 +49,7 @@ const Footer = () => {
                     placeholder='Enter your email'
                   />
                   <button className='w-full md:w-auto my-2 p-2 px-4 bg-button rounded-2xl shadow-xl hover:shadow-2xl text-btnTxt font-bold'>
-                    Sign up
+                    Sign Up
                   </button>
                 </form>
               </div>
