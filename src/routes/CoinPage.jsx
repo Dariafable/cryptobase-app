@@ -25,7 +25,7 @@ const CoinPage = () => {
   return (
     <div className='my-12 py-8 rounded-div'>
       <div className='py-8 flex items-center'>
-        <img className='w-20 mr-8' src={coin.image?.large} alt='/' />
+        <img className='w-20 mr-8' src={coin.image?.large} alt='' />
         <div>
           <p className='text-3xl font-bold'>{coin?.name} price</p>
           <p>({coin.symbol?.toUpperCase()} / USD)</p>
