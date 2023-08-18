@@ -7,10 +7,15 @@ const Trending = () => {
   const url = 'https://api.coingecko.com/api/v3/search/trending';
 
   React.useEffect(() => {
-    axios.get(url).then((response) => {
-      setTrending(response.data.coins);
-      console.log(response.data.coins);
-    });
+    axios
+      .get(url)
+      .then((response) => {
+        setTrending(response.data.coins);
+        console.log(response.data.coins);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, [url]);
 
   return (
