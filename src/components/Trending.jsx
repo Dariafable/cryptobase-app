@@ -27,7 +27,7 @@ const Trending = () => {
             key={coin.item.coin_id}
             className='p-4 rounded-div hover:scale-105 ease-in duration-300'
           >
-            <div className='w-full flex justify-between items-center'>
+            <div className='w-full flex justify-between items-center flex-wrap gap-2'>
               <div className='flex items-center'>
                 <img className='mr-4 rounded-full' src={coin.item.small} alt='/' />
                 <div>
