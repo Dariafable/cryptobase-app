@@ -44,10 +44,14 @@ const Navbar = () => {
       >
         <ul className='p-4 w-full'>
           <li className='py-6 border-b'>
-            <Link to='/'>Home</Link>
+            <Link onClick={handleNav} to='/'>
+              Home
+            </Link>
           </li>
           <li className='py-6 border-b'>
-            <Link to='/aacount'>Account</Link>
+            <Link onClick={handleNav} to='/aacount'>
+              Account
+            </Link>
           </li>
         </ul>
         <div className='p-4 flex flex-col w-full'>
@@ -60,7 +64,10 @@ const Navbar = () => {
             </button>
           </Link>
           <Link to='/signup'>
-            <button className='w-full my-2 p-3 bg-button text-btnTxt border border-secondary rounded-2xl shadow-xl'>
+            <button
+              onClick={handleNav}
+              className='w-full my-2 p-3 bg-button text-btnTxt border border-secondary rounded-2xl shadow-xl'
+            >
               Sign Up
             </button>
           </Link>
