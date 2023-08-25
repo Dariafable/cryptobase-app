@@ -1,16 +1,36 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AiOutlineMail, AiFillLock } from 'react-icons/ai';
+import { UserAuth } from '../context/AuthContext';
 
 const Signup = () => {
+  const [email, setEmail] = React.useState('');
+  const [password, setPassword] = React.useState('');
+  const [error, setError] = React.useState('');
+  const navigate = useNavigate();
+  const { signUp } = UserAuth();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError('');
+    try {
+      await signUp(email, password);
+      navigate('/account');
+    } catch (e) {
+      setError(e.message);
+      console.log(e.message);
+    }
+  };
+
   return (
     <div className='px-4 py-20 mx-auto max-w-[400px] min-h-[600px]'>
       <h1 className='text-2xl font-bold'>Sign Up</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className='py-4'>
           <lable>Email</lable>
           <div className='w-full relative rounded-2xl shadow-xl'>
             <input
+              onChange={(e) => setEmail(e.target.value)}
               className='p-2 w-full bg-primary border border-input rounded-2xl'
               type='email'
               placeholder='Enter your email'
@@ -23,8 +43,9 @@ const Signup = () => {
           <lable>Password</lable>
           <div className='w-full relative rounded-2xl shadow-xl'>
             <input
+              onChange={(e) => setPassword(e.target.value)}
               className='p-2 w-full bg-primary border border-input rounded-2xl'
-              type='email'
+              type='password'
               placeholder='Enter your password'
             />
             <AiFillLock className='absolute top-3 right-2 text-gray-400' />

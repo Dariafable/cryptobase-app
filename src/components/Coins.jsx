@@ -1,5 +1,4 @@
 import React from 'react';
-
 import CoinItem from './CoinItem';
 
 const Coins = ({ coins }) => {
@@ -8,7 +7,7 @@ const Coins = ({ coins }) => {
   return (
     <div className='my-4 rounded-div'>
       <div className='pt-4 pb-6 flex flex-col md:flex-row justify-between text-center md:text-right'>
-        <h1 className=' my-2 text-2xl font-bold'>Search Crypto</h1>
+        <h1 className='my-2 text-2xl font-bold'>Search Crypto</h1>
         <form>
           <input
             onChange={(e) => setSearchText(e.target.value)}
@@ -42,11 +41,14 @@ const Coins = ({ coins }) => {
                 value.name.toLowerCase().includes(searchText.toLowerCase()) ||
                 value.symbol.toLowerCase().includes(searchText.toLowerCase())
               ) {
-                return value;
+                return (
+                  value.name.toLowerCase().includes(searchText) ||
+                  value.symbol.toLowerCase().includes(searchText.toLowerCase())
+                );
               }
             })
             .map((coin) => (
-              <CoinItem key={coin.last_updated} coin={coin} />
+              <CoinItem key={coin.id} coin={coin} />
             ))}
         </tbody>
       </table>
