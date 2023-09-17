@@ -1,5 +1,15 @@
 # Getting Started with Create React App
 
+
+<img width="1403" alt="Снимок экрана 2023-09-17 в 12 19 50" src="https://github.com/Dariafable/cryptobase-app/assets/79958338/b798f0a9-aca2-485b-b3d8-a1f69c9cef28">
+
+<img width="1408" alt="Снимок экрана 2023-09-17 в 12 20 11" src="https://github.com/Dariafable/cryptobase-app/assets/79958338/5534dcc1-4166-472b-9910-0022fc570244">
+
+<img width="1407" alt="Снимок экрана 2023-09-17 в 12 20 32" src="https://github.com/Dariafable/cryptobase-app/assets/79958338/7848b967-4cb7-4431-9c4f-4cc421e13e43">
+
+<img width="1414" alt="Снимок экрана 2023-09-17 в 12 21 03" src="https://github.com/Dariafable/cryptobase-app/assets/79958338/a12bcb16-a4f9-430a-aff1-bf7576c1789e">
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
