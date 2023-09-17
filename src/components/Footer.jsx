@@ -49,10 +49,6 @@ const Footer = () => {
               </p>
               <div className='py-4'>
                 <form>
-                  {/*   <input
-                    className='w-full md:w-auto mr-2 p-2 bg-primary border border-input rounded-2xl shadow-xl'
-                    placeholder='Enter your email'
-                  /> */}
                   <Link to='/signup'>
                     <button
                       className={
