@@ -7,7 +7,8 @@
 
 <img width="1407" alt="Снимок экрана 2023-09-17 в 12 20 32" src="https://github.com/Dariafable/cryptobase-app/assets/79958338/7848b967-4cb7-4431-9c4f-4cc421e13e43">
 
-<img width="1414" alt="Снимок экрана 2023-09-17 в 12 21 03" src="https://github.com/Dariafable/cryptobase-app/assets/79958338/a12bcb16-a4f9-430a-aff1-bf7576c1789e">
+<img width="1401" alt="Снимок экрана 2023-09-17 в 22 26 19" src="https://github.com/Dariafable/cryptobase-app/assets/79958338/eb9a6067-1453-450d-b5a6-180a038c1e0f">
+
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
