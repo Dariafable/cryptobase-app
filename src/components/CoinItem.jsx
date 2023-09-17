@@ -8,6 +8,7 @@ import { arrayUnion, doc, updateDoc, onSnapshot } from 'firebase/firestore';
 
 const CoinItem = ({ coin }) => {
   const [savedCoin, setSavedCoin] = React.useState(false);
+  /*  const [arr, setArr] = React.useState([]); */
   const { user } = UserAuth();
 
   const coinPath = doc(db, 'users', `${user?.email}`);
@@ -28,6 +29,11 @@ const CoinItem = ({ coin }) => {
       alert('Please sign in to save a coin to your watch list');
     }
   };
+
+  /*  const userWatchList = onSnapshot(doc(db, 'users', user.email), (doc) => {
+    console.log(doc.data());
+    setArr(doc.data());
+  }); */
 
   return (
     <tr className='h-[80px] border-b last:border-b-0 overflow-hidden'>

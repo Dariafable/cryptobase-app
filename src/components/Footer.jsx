@@ -44,7 +44,9 @@ const Footer = () => {
               <div className='py-4 md:py-0 md:pb-0 mt-[-1rem] flex justify-center md:justify-end'>
                 <ThemeToggle />
               </div>
-              <p className='text-center md:text-right'>Sign up for crypto news</p>
+              <p className={user?.email ? 'hidden' : 'text-center md:text-right'}>
+                Sign up for crypto news
+              </p>
               <div className='py-4'>
                 <form>
                   {/*   <input
