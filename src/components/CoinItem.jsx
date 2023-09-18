@@ -31,10 +31,12 @@ const CoinItem = ({ coin }) => {
   };
 
   React.useEffect(() => {
-    onSnapshot(coinPath, (doc) => {
-      setSavedCoinsList(doc.data()?.watchList);
-    });
-  }, [user.email, coinPath]);
+    if (user?.email) {
+      onSnapshot(coinPath, (doc) => {
+        setSavedCoinsList(doc.data()?.watchList);
+      });
+    }
+  }, [user?.email, coinPath]);
 
   const userWatchList = savedCoinsList.map((item) => item.id).includes(coin.id);
 
