@@ -8,7 +8,6 @@ import { arrayUnion, doc, updateDoc, onSnapshot } from 'firebase/firestore';
 
 const CoinItem = ({ coin }) => {
   const [savedCoin, setSavedCoin] = React.useState(false);
-  /*  const [arr, setArr] = React.useState([]); */
   const { user } = UserAuth();
 
   const coinPath = doc(db, 'users', `${user?.email}`);
@@ -30,9 +29,8 @@ const CoinItem = ({ coin }) => {
     }
   };
 
-  /*  const userWatchList = onSnapshot(doc(db, 'users', user.email), (doc) => {
-    console.log(doc.data());
-    setArr(doc.data());
+  /*   const userWatchList = onSnapshot(doc(db, 'users', user.email), (doc) => {
+    console.log(doc.data().watchList);
   }); */
 
   return (
