@@ -8,6 +8,7 @@ import { arrayUnion, doc, updateDoc, onSnapshot } from 'firebase/firestore';
 
 const CoinItem = ({ coin }) => {
   const [savedCoin, setSavedCoin] = React.useState(false);
+  const [savedCoinsList, setSavedCoinsList] = React.useState([]);
   const { user } = UserAuth();
 
   const coinPath = doc(db, 'users', `${user?.email}`);
@@ -29,14 +30,30 @@ const CoinItem = ({ coin }) => {
     }
   };
 
-  /*   const userWatchList = onSnapshot(doc(db, 'users', user.email), (doc) => {
-    console.log(doc.data().watchList);
-  }); */
+  React.useEffect(() => {
+    onSnapshot(coinPath, (doc) => {
+      setSavedCoinsList(doc.data()?.watchList);
+    });
+  }, [user.email, coinPath]);
+
+  const userWatchList = savedCoinsList.map((item) => item.id).includes(coin.id);
+
+  const deleteCoin = async (passedId) => {
+    setSavedCoin(false);
+    try {
+      const result = savedCoinsList.filter((item) => item.id !== passedId);
+      await updateDoc(coinPath, {
+        watchList: result,
+      });
+    } catch (e) {
+      console.log(e.message);
+    }
+  };
 
   return (
     <tr className='h-[80px] border-b last:border-b-0 overflow-hidden'>
-      <td onClick={saveCoin}>
-        {savedCoin ? (
+      <td onClick={saveCoin} /* onClick={() => deleteCoin(coin.id)} */>
+        {savedCoin || userWatchList ? (
           <AiFillStar className='cursor-pointer' />
         ) : (
           <AiOutlineStar className='cursor-pointer' />
